@@ -19,7 +19,7 @@ Membuat Flowchart untuk program hitung nilai dengan proses max, min, dan average
     j@{shape: diamond, label: "nilai[i] < min"}
     k@{shape: lean-r, label: '"{min = nilai[i]}"'}
     l@{shape: lean-r, label: '"{total += nilai[i]}"'}
-    r@{shape: lean-r, label: "i++"}
+    r@{shape: rect, label: "i++"}
 
     m@{shape: rect, label: "average = total / nilai.length" }
     n@{shape: lean-r, label: '"Nilai Max: {max}"'}
