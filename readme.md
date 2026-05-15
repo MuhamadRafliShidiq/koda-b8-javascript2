@@ -9,9 +9,9 @@ Membuat Flowchart untuk program hitung nilai dengan proses max, min, dan average
 
     a@{shape: circle, label: "start"}
     b@{shape: rect, label: "nilai" }
-    c@{shape: lean-r, label: "max = nilai[0]"}
-    d@{shape: lean-r, label: "min = nilai[0]"}
-    e@{shape: lean-r, label: "total = 0"}
+    c@{shape: rect, label: "max = nilai[0]"}
+    d@{shape: rect, label: "min = nilai[0]"}
+    e@{shape: rect, label: "total = 0"}
     f@{shape: rect, label: "i = 0" }
     g@{shape: diamond, label: "i < nilai.length"}
     h@{shape: diamond, label: "nilai[i] > max"}
