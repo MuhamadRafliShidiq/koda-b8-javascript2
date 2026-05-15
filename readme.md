@@ -8,7 +8,7 @@ Membuat Flowchart untuk program hitung nilai dengan proses max, min, dan average
     flowchart TD
 
     a@{shape: circle, label: "start"}
-    b@{shape: rect, label: "nilai" }
+    b@{shape: rect, label: "nilai = [90, 80, 70, 60, 50, 40, 30, 20, 10, 0]" }
     c@{shape: rect, label: "max = nilai[0]"}
     d@{shape: rect, label: "min = nilai[0]"}
     e@{shape: rect, label: "total = 0"}
@@ -17,8 +17,8 @@ Membuat Flowchart untuk program hitung nilai dengan proses max, min, dan average
     h@{shape: diamond, label: "nilai[i] > max"}
     i@{shape: rect, label: 'max = nilai[i]'}
     j@{shape: diamond, label: "nilai[i] < min"}
-    k@{shape: rect, label: "min = nilai[i]"}
-    l@{shape: rect, label: "total += nilai[i]"}
+    k@{shape: rect, label: 'min = nilai[i]'}
+    l@{shape: rect, label: 'total += nilai[i]'}
     r@{shape: rect, label: "i++"}
 
     m@{shape: rect, label: "average = total / nilai.length" }
