@@ -1,13 +1,7 @@
 function hitungNilai(nilai) {
-
     // Validasi apakah array
     if (!Array.isArray(nilai)) {
         console.log("Input harus berupa array");
-        return;
-    }
-    // Validasi apakah array kosong
-    if (nilai.length === 0) {
-        console.log("Array kosong");
         return;
     }
     let max = nilai[0];
@@ -15,11 +9,6 @@ function hitungNilai(nilai) {
     let total = 0;
     for (let i = 0; i < nilai.length; i++) {
 
-        // Validasi array harus berisi angka
-        if (typeof nilai[i] !== "number") {
-            console.log("Semua elemen array harus berupa angka");
-            return;
-        }
         if (nilai[i] > max) {
             max = nilai[i];
         }
