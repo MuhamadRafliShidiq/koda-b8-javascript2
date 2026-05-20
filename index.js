@@ -1,13 +1,11 @@
 function hitungNilai(nilai) {
     // Validasi apakah array
     if (!Array.isArray(nilai)) {
-        console.log("Input harus berupa array");
-        return;
+        throw new Error("Input harus berupa array");
     }
     // Validasi apakah array kosong
     if (nilai.length === 0) {
-        console.log("Array tidak boleh kosong");
-        return;
+        throw new Error("Array tidak boleh kosong");
     }
     let max = nilai[0];
     let min = nilai[0];
@@ -15,8 +13,7 @@ function hitungNilai(nilai) {
     for (let i = 0; i < nilai.length; i++) {
         // Validasi array harus berisi angka
         if (typeof nilai[i] !== "number") {
-            console.log("Semua elemen array harus berupa angka");
-            return;
+            throw new Error("Semua elemen array harus berupa angka");
         }
         if (nilai[i] > max) {
             max = nilai[i];
@@ -27,11 +24,21 @@ function hitungNilai(nilai) {
         total += nilai[i];
     }
     const average = total / nilai.length;
-    console.log(`Nilai Max: ${max}`);
-    console.log(`Nilai Min: ${min}`);
-    console.log(`Nilai Average: ${average}`);
+    return { max, min, average };
 }
-const nilai = [80, 70, 60, 50, "40"];
-hitungNilai(nilai);
+
+try {
+    const nilai = [80, 70, 60, 50, 40];
+    const hasil = hitungNilai(nilai);
+    hitungNilai(nilai);
+    console.log(`Nilai Max: ${hasil.max}`);
+    console.log(`Nilai Min: ${hasil.min}`);
+    console.log(`Nilai Average: ${hasil.average}`)
+} catch (error) {
+    console.error(error.message);
+    return;
+}
+
+
 
 
