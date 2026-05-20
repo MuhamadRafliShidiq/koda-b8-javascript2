@@ -13,7 +13,11 @@ function hitungNilai(nilai) {
     let min = nilai[0];
     let total = 0;
     for (let i = 0; i < nilai.length; i++) {
-
+        // Validasi array harus berisi angka
+        if (typeof nilai[i] !== "number") {
+            console.log("Semua elemen array harus berupa angka");
+            return;
+        }
         if (nilai[i] > max) {
             max = nilai[i];
         }
@@ -27,7 +31,7 @@ function hitungNilai(nilai) {
     console.log(`Nilai Min: ${min}`);
     console.log(`Nilai Average: ${average}`);
 }
-const nilai = []
+const nilai = [80, 70, 60, 50, "40"];
 hitungNilai(nilai);
 
 
