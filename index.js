@@ -1,19 +1,39 @@
-// Membuat Program hitung nilai dengan proses Menentukan Nilai Max, Min, dan Average
-const nilai = [90, 80, 70, 60, 50, 40, 30, 20, 10, 0];
-let max = nilai[0];
-let min = nilai[0];
-let total = 0;
-for (let i = 9; i < nilai.length; i++) {
-    if (nilai[i] > max) {
-        max = nilai[i];
+function hitungNilai(nilai) {
+
+    // Validasi apakah array
+    if (!Array.isArray(nilai)) {
+        console.log("Input harus berupa array");
+        return;
     }
-    if (nilai[i] < min) {
-        min = nilai[i];
+    // Validasi apakah array kosong
+    if (nilai.length === 0) {
+        console.log("Array kosong");
+        return;
     }
-    total += nilai[i];
+    let max = nilai[0];
+    let min = nilai[0];
+    let total = 0;
+    for (let i = 0; i < nilai.length; i++) {
+
+        // Validasi array harus berisi angka
+        if (typeof nilai[i] !== "number") {
+            console.log("Semua elemen array harus berupa angka");
+            return;
+        }
+        if (nilai[i] > max) {
+            max = nilai[i];
+        }
+        if (nilai[i] < min) {
+            min = nilai[i];
+        }
+        total += nilai[i];
+    }
+    const average = total / nilai.length;
+    console.log(`Nilai Max: ${max}`);
+    console.log(`Nilai Min: ${min}`);
+    console.log(`Nilai Average: ${average}`);
 }
-const average = total / nilai.length;
-console.log(`Nilai Max: ${max}`);
-console.log(`Nilai Min: ${min}`);
-console.log(`Nilai Average: ${average}`);
+const nilai = [100, 80, 30, 20, 10]
+hitungNilai(nilai);
+
 
